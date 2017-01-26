@@ -1,0 +1,2282 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.jump-anchor {
+	padding-top:40px;
+	margin-bottom: -40px;
+}
+
+body {
+  /*background-color: #f2e5f2;*/
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  /*font-family: 'Roboto', serif;*/
+}
+
+.container {
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  /*margin-bottom: 20px;*/
+  display: block;
+  font-size: 1.2rem;
+  color: #730073;
+  /*override for fixed nav bar anchor jumps*/
+  padding-top: 70px;
+  padding-bottom: 90px;
+  border-bottom:1px solid #bbb;
+}
+
+
+.row {
+  display: flex;
+}
+
+[class*="col"] {
+  float: left;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.8;
+  /*border: 2px solid black;*/
+
+}
+
+.col1 {
+  width: 8.33%;
+}
+
+.col2 {
+  width: 16.66%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33%;
+}
+
+.col5 {
+  width: 41.66%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col7 {
+  width: 58.33%;
+}
+
+.col8 {
+  width: 66.66%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+.col10 {
+  width: 83.33%;
+}
+
+.col11 {
+  width: 91.66%;
+}
+
+.col12 {
+  width: 100%;
+}
+
+
+/*on load fade-in effect on page*/
+#top {
+	-webkit-animation: fadeIn ease-in 1.3s;
+}
+#About {
+	-webkit-animation: fadeIn ease-in 1s;
+}
+
+#Skills {
+	-webkit-animation: fadeIn ease-in 1.5s;	
+}
+
+#Projects {
+	-webkit-animation: fadeIn ease-in 2s;
+}
+
+#Contact {
+	-webkit-animation: fadeIn ease-in 2.8s;
+}
+
+
+
+/*anchor links styles */
+
+/* unvisited link */
+.main-nav a,
+.carousel a
+ {
+  text-decoration: none;
+}
+
+.main-nav a:link,
+.carousel a:link {
+
+    color: #730073;
+}
+
+/* visited link */
+a:visited {
+    color: #730073;
+}
+
+/* mouse over link */
+.main-nav a:hover {
+  -webkit-animation: top-bar .8s;
+}
+
+/* selected link */
+a:active {
+    color: #730073;
+}
+
+
+/*Nav Styles*/
+
+
+/*override for fixed top nav bar anchor selection*/
+
+
+
+#top {
+	border-bottom: none;
+	padding-top:0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.main-nav {
+  font-size: 1.2rem;
+}
+
+.main-nav ul {
+  /*border:1px solid black;*/
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right:2rem;
+}
+
+
+.main-nav ul li:last-child {
+  margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+}
+
+
+
+#modal-toggle:checked + .modal,
+#modal-toggle:checked + .modal + .modal-cover {
+  display: flex;
+}
+
+
+
+/*modal styles*/
+
+.modal {
+  display: none;
+  position: fixed;
+  left:1rem;
+  top:50%;
+  left:50%;
+  width:90%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  background-color: black;
+  z-index: 99;
+  opacity: .7;
+  color:purple;
+  font-size: 3rem;
+}
+
+.modal-content {
+  font-size: 2rem;
+  position: relative;
+  width:60%;
+  top:60%;
+  left:20%;
+  transform: translateY(-50%);
+  /*transform: translateX(10%);*/
+}
+
+
+
+.modal-cover {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: .5;
+  z-index: 98;
+}
+
+/*Top name styles */
+
+.name {
+  font-size: 1.5rem;
+  padding: .3rem 0;
+  -webkit-animation: fadeIn ease-in 2.5s;
+}
+
+/*top nav animation*/
+#about {
+	 -webkit-animation: fadeInNav ease-in 2s;	
+}
+
+#projects {
+	-webkit-animation: fadeInNav ease-in 2.3s;
+}
+
+#skills {
+	-webkit-animation: fadeInNav ease-in 2.6s;
+}
+
+#contact {
+	-webkit-animation: fadeInNav ease-in 3s;
+}
+
+/*anchor styles*/
+.main-nav a {
+     display: block;
+}
+
+
+/*search box styles*/
+
+.search {
+	position: relative;
+	/*padding:5px;*/
+	/*vertical-align: bottom;*/
+}
+
+
+.search-bar input[type="text"]:focus {
+	outline: none;
+}
+
+.search-bar input[type="text"]:focus + label ~ .search-text  {
+	top:0;
+	font-size: .9rem;
+}
+
+/*.search-bar {
+	border-bottom: 1px solid white;
+}*/
+
+.search-bar input[type="text"] {
+  width:80%;
+  padding:.3rem 0;
+  margin-right:.2rem;
+  margin-bottom: .1rem;
+  border-top:0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid purple;
+  text-transform: uppercase;
+  color:purple;
+}
+
+input::-webkit-input-placeholder {
+  color: purple;
+}
+
+input:-moz-placeholder{
+  color: purple;
+}
+
+
+/*radio button*/
+input[type="radio"] {
+  display: none;
+}
+
+
+
+/* move the sidebar into the screen */
+#sidebar:checked ~ .sidebar {
+  background-color: #f2e5f2;
+  left:.1rem;
+}
+
+/*Hide the label when the sidebar slides out*/
+#sidebar:checked ~ .sidebar ~ div > .row > div > #menu-button-open
+{
+  visibility: hidden;
+}
+
+/*move the whole web contents to the right when sidebar is checked*/
+#sidebar:checked ~ .sidebar ~ div 
+{
+  -webkit-transform:translate3d(10rem, 0, 0);
+  -moz-transform:translate3d(10rem, 0, 0);
+  -o-transform:translate3d(10rem, 0, 0);
+  transform:translate3d(10rem, 0, 0);
+}
+
+/*sidebar Menu*/
+
+.sidebar-menu {
+
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: .5rem .3rem;
+}
+
+.sidebar-menu li:first-child {
+  margin-top:.3rem;
+}
+
+.sidebar-menu a {
+     text-decoration: none;
+     display: block;
+}
+
+/*do fixed vs absolute?*/
+.sidebar {
+  position: fixed;
+  width:10rem;
+  height:100vh;
+  opacity:.80;
+  background-color: #f2e5f2;
+  left:-10rem;
+  z-index: 99;
+}
+
+#menu-button-open {
+  position: absolute;
+  top:0;
+  left:.2rem;
+  visibility: hidden;
+  padding: 0;
+  margin:0;
+  /*font-size: 1.5rem;*/
+}
+
+#menu-button-open div {
+  width:35px;
+  height:5px;
+  background-color: #730073;
+  margin:6px 0;
+}
+
+/*Shows when the sidebar slides out*/
+#menu-button-close {
+  position: absolute;
+  left:9rem;
+  /*font-size: 1.5rem;*/
+  color: #730073;
+}
+
+.copyright {
+  font-size: .6rem;
+  padding-left: .3rem;
+  margin: .3rem 0;
+  color: #730073;
+}
+
+
+
+/*About Me Styling*/
+
+.align-left {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+#hello {
+	font-size: 1.5rem;
+}
+
+
+/*SKILLS Styling*/
+
+.skills-content {
+  width:67%;
+  text-align: left;
+  margin:0 auto;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+
+.test {
+	  height: 31rem;
+}
+
+/*container for graph. graph will be a flex box that is aligned in the center of page*/
+.graph-container {
+  /*margin:0 auto;*/
+  /*text-align: center;*/
+  /*height:31rem;*/
+  /*display: flex;*/
+  /*align-items:flex-start;*/
+  /*justify-content:center;*/
+  position: relative;
+}
+
+.graph {
+  /*border:1px solid black;*/
+  position: relative;
+}
+
+.graph h1 {
+  /*border:1px solid black;*/
+}
+
+
+
+/*graph x and y axis */
+.y-axis, .x-axis {
+  padding:0;
+  margin:0;
+  list-style-type: none;
+  /*border:1px solid black;*/
+}
+
+.y-axis, .x-axis {
+  display: inline-block;
+}
+
+.y-axis li {
+  padding-bottom: 1.5rem;
+}
+
+.x-axis {
+  font-size: 1rem;
+}
+
+.x-axis li{
+  display: inline-block;
+  position: relative;
+  width:2.3rem;
+  top:1.8rem;
+  padding-bottom: 1.2rem;
+}
+
+.x-axis li span {
+  display: inline-block;
+  position: relative;
+  top:2.7rem;
+  transform: rotate(50deg);
+}
+
+.x-axis li:nth-child(3) span {
+  margin-left:9px;
+  top:2.3rem;
+}
+
+.x-axis li:nth-child(4) span {
+  margin-left:9px;
+  top:2.3rem;
+}
+
+
+/*graph bars */
+
+div[class^="bar-"]:hover .tooltip {
+  visibility: visible;
+}
+
+.bar-one, .bar-two, .bar-three, .bar-four {
+  padding:0;
+  margin:0;
+}
+
+.bar-one {
+  width:2rem;
+  height:5.5rem;
+  background-color: #45C594;
+}
+
+.bar-two {
+  width:2rem;
+  height:4rem;
+  background-color: #FA8072;
+}
+
+.bar-three {
+  width:2rem;
+  height:2rem;
+  background-color: #fac472;
+}
+
+.bar-four {
+  width:2rem;
+  height:4rem;
+  background-color: #fa72a8;
+}
+
+
+/*tool tip*/
+
+.tooltip {
+  position: absolute;
+  font-size: .9rem;
+  top:-2.6rem;
+  left:0rem;
+  background-color: #f2e5f2;
+  border-bottom:0;
+  color:purple;
+  width:12rem;
+  z-index: 99;
+  /*opacity: .8;*/
+  text-align: left;
+  padding: .3rem;
+  visibility: hidden;
+
+}
+
+.one-tip {
+  top:-4.4rem;
+}
+
+.two-tip {
+  top:-2.3rem;
+}
+
+.three-tip {
+  top:-2.3rem;
+}
+
+.four-tip {
+  top:-2.3rem;
+}
+
+
+.bubble {
+  border-style: solid;
+  position: absolute;
+  border-color: #f2e5f2 transparent transparent transparent;
+  border-width:1rem .5rem 0 .5rem;
+  left:.5rem;
+}
+
+
+
+/*PROJECTS styles*/
+
+.projects-container i {
+  border-radius: 50%;
+}
+
+.projects-container i:hover {
+  background-color: purple;
+  color:white;
+}
+
+.carousel-links {
+  margin:1rem;
+}
+
+.projects-container {
+  background-color: #cc99cc;
+}
+
+ .projects-container label {
+  display: block;
+  text-align: center;
+  padding:.5rem;
+ }
+
+/* .projects-container label:hover {
+  background-color: #730073;
+  color:white;
+ }*/
+
+
+.projects-container .content {
+  display: none;
+  overflow-y:hidden;
+  vertical-align: top;
+}
+
+
+.project-selection, .content {
+    display: block;
+    width:100%;
+  }
+
+.project-selection label {
+  text-align: center;
+}
+
+/*.project-selection {
+  display: inline-block;
+  width:24%;
+}*/
+
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel label {
+  display: inline-block;
+}
+
+
+.arrow-right {
+  float: right;
+}
+
+.arrow-left {
+  float: left;
+}
+
+.custom {
+  opacity: 1;
+}
+
+.carousel img {
+    width:90%;
+  }
+
+
+
+/*ACCORDION CAROUSEL CONTROLS*/
+
+/*circles*/
+
+#accordion-slide-one:checked + .carousel-slide,
+#accordion-slide-two:checked + .carousel-slide,
+#accordion-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/* arrows */
+
+#accordion-one-right:checked + input + .carousel-slide,
+#accordion-one-left:checked + input + .carousel-slide,
+#accordion-two-left:checked + input + .carousel-slide,
+#accordion-two-right:checked + input + input + .carousel-slide,
+#accordion-three-left:checked + input + input + .carousel-slide,
+#accordion-three-right:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current highlighted for arrow / circle click*/
+
+#accordion-slide-one:checked + 
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="accordion-slide-one"],
+
+#accordion-slide-two:checked + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="accordion-slide-two"],
+
+#accordion-slide-three:checked + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="accordion-slide-three"],
+
+#accordion-one-left:checked + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="accordion-slide-three"],
+
+#accordion-one-right:checked + input +
+.carousel-slide > label + 
+label + img + div > label +
+label[for="accordion-slide-two"],
+
+#accordion-two-left:checked + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="accordion-slide-one"],
+
+#accordion-two-right:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="accordion-slide-three"],
+
+#accordion-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label[for="accordion-slide-two"],
+
+#accordion-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="accordion-slide-one"] {
+  
+  color:white;
+}
+
+
+/*TAB Carousel controls*/
+
+
+/*circles*/
+#tab-slide-one:checked + .carousel-slide,
+#tab-slide-two:checked + .carousel-slide,
+#tab-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*arrows*/
+#tab-one-right:checked + input + .carousel-slide,
+#tab-two-right:checked + input + .carousel-slide,
+#tab-three-right:checked + input + input + .carousel-slide,
+#tab-one-left:checked + input + input + .carousel-slide,
+#tab-two-left:checked + input + .carousel-slide,
+#tab-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+
+
+
+/*circle current */
+
+#tab-slide-one:checked + 
+.carousel-slide > label[for="tab-one-left"] + 
+label + h3 + p + p + div > 
+label[for="tab-slide-one"],
+
+#tab-slide-two:checked + 
+.carousel-slide > label[for="tab-two-left"] + 
+label + img + div > label[for="tab-slide-one"] +
+label[for="tab-slide-two"],
+
+#tab-slide-three:checked + 
+.carousel-slide > label[for="tab-three-left"] + 
+label + img + div > label[for="tab-slide-one"] + label[for="tab-slide-two"] +
+label[for="tab-slide-three"],
+
+#tab-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="tab-slide-three"],
+
+#tab-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="tab-slide-two"],
+
+#tab-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="tab-slide-one"],
+
+#tab-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="tab-slide-three"],
+
+#tab-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="tab-slide-two"],
+
+#tab-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="tab-slide-one"] {
+  
+  color:white;
+}
+
+
+/*IMAGE GALLERY CONTROLS*/
+
+/* circles */
+
+#gallery-slide-one:checked + .carousel-slide,
+#gallery-slide-two:checked + .carousel-slide,
+#gallery-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+
+/*arrows*/
+
+#gallery-one-right:checked + input + .carousel-slide,
+#gallery-two-right:checked + input + .carousel-slide,
+#gallery-three-right:checked + input + input + .carousel-slide,
+#gallery-one-left:checked + input + input + .carousel-slide,
+#gallery-two-left:checked + input + .carousel-slide,
+#gallery-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current */
+
+#gallery-slide-one:checked + 
+.carousel-slide > label[for="gallery-one-left"] + 
+label + h3 + p + p + div > 
+label[for="gallery-slide-one"],
+
+#gallery-slide-two:checked + 
+.carousel-slide > label[for="gallery-two-left"] + 
+label + img + div > label[for="gallery-slide-one"] +
+label[for="gallery-slide-two"],
+
+#gallery-slide-three:checked + 
+.carousel-slide > label[for="gallery-three-left"] + 
+label + img + div > label[for="gallery-slide-one"] + label[for="gallery-slide-two"] +
+label[for="gallery-slide-three"],
+
+#gallery-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="gallery-slide-three"],
+
+#gallery-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="gallery-slide-two"],
+
+#gallery-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="gallery-slide-one"],
+
+#gallery-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="gallery-slide-three"],
+
+#gallery-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="gallery-slide-two"],
+
+#gallery-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="gallery-slide-one"] {
+  
+  color:white;
+}
+
+/*SHOPPING CART CONTROLS*/
+
+/* circles */
+
+#cart-slide-one:checked + .carousel-slide,
+#cart-slide-two:checked + .carousel-slide,
+#cart-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+
+/*arrows*/
+
+#cart-one-right:checked + input + .carousel-slide,
+#cart-two-right:checked + input + .carousel-slide, 
+#cart-three-right:checked + input + input + .carousel-slide,
+#cart-one-left:checked + input + input + .carousel-slide,
+#cart-two-left:checked + input + .carousel-slide,
+#cart-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current */
+
+#cart-slide-one:checked + 
+.carousel-slide > label[for="cart-one-left"] + 
+label + h3 + p + p + div > 
+label[for="cart-slide-one"],
+
+#cart-slide-two:checked + 
+.carousel-slide > label[for="cart-two-left"] + 
+label + img + div > label[for="cart-slide-one"] +
+label[for="cart-slide-two"],
+
+#cart-slide-three:checked + 
+.carousel-slide > label[for="cart-three-left"] + 
+label + img + div > label[for="cart-slide-one"] + label[for="cart-slide-two"] +
+label[for="cart-slide-three"],
+
+#cart-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="cart-slide-three"],
+
+#cart-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="cart-slide-two"],
+
+#cart-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="cart-slide-one"],
+
+#cart-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="cart-slide-three"],
+
+#cart-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="cart-slide-two"],
+
+#cart-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="cart-slide-one"] {
+  
+  color:white;
+}
+
+
+/* FORMS CONTROLS*/
+
+/* circles */
+
+#forms-slide-one:checked + .carousel-slide,
+#forms-slide-two:checked + .carousel-slide,
+#forms-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*arrows*/
+
+#forms-one-right:checked + input + .carousel-slide,
+#forms-two-right:checked + input + .carousel-slide,
+#forms-three-right:checked + input + input + .carousel-slide,
+#forms-one-left:checked + input + input + .carousel-slide,
+#forms-two-left:checked + input + .carousel-slide,
+#forms-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+
+/*circle current highlight*/
+
+#forms-slide-one:checked + 
+.carousel-slide > label[for="forms-one-left"] + 
+label + h3 + p + p + div > 
+label[for="forms-slide-one"],
+
+#forms-slide-two:checked + 
+.carousel-slide > label[for="forms-two-left"] + 
+label + img + div > label[for="forms-slide-one"] +
+label[for="forms-slide-two"],
+
+#forms-slide-three:checked + 
+.carousel-slide > label[for="forms-three-left"] + 
+label + img + div > label[for="forms-slide-one"] + label[for="forms-slide-two"] +
+label[for="forms-slide-three"],
+
+#forms-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="forms-slide-three"],
+
+#forms-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="forms-slide-two"],
+
+#forms-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="forms-slide-one"],
+
+#forms-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="forms-slide-three"],
+
+#forms-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="forms-slide-two"],
+
+#forms-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="forms-slide-one"] {
+  
+  color:white;
+}
+
+
+/* BUTTON COMPONENT CONTROLS*/
+
+/* circles */
+
+#btn-comp-slide-one:checked + .carousel-slide,
+#btn-comp-slide-two:checked + .carousel-slide,
+#btn-comp-slide-three:checked + .carousel-slide
+ {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*arrows*/
+
+#btn-comp-one-right:checked + input + .carousel-slide,
+#btn-comp-two-right:checked + input + input + .carousel-slide,
+#btn-comp-three-right:checked + input + input + .carousel-slide,
+#btn-comp-one-left:checked + input + input + .carousel-slide,
+#btn-comp-two-left:checked + input + .carousel-slide,
+#btn-comp-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current highlights*/
+
+#btn-comp-slide-one:checked + 
+.carousel-slide > label[for="btn-comp-one-left"] + 
+label + h3 + p + p + div > 
+label[for="btn-comp-slide-one"],
+
+#btn-comp-slide-two:checked + 
+.carousel-slide > label[for="btn-comp-two-left"] + 
+label + img + div > label[for="btn-comp-slide-one"] +
+label[for="btn-comp-slide-two"],
+
+#btn-comp-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label[for="btn-comp-slide-two"],
+
+#btn-comp-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="btn-comp-slide-two"],
+
+#btn-comp-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="btn-comp-slide-one"],
+
+#btn-comp-two-right:checked + input + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="btn-comp-slide-one"]
+{
+  color:white;
+}
+
+
+/* BUSINESS CARD CONTROLS*/
+
+/* circles */
+
+#bus-card-slide-one:checked + .carousel-slide,
+#bus-card-slide-two:checked + .carousel-slide,
+#bus-card-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*arrows*/
+
+#bus-card-one-right:checked + input + .carousel-slide,
+#bus-card-two-right:checked + input + .carousel-slide,
+#bus-card-three-right:checked + input + input + .carousel-slide,
+#bus-card-one-left:checked + input + input + .carousel-slide,
+#bus-card-two-left:checked + input + .carousel-slide,
+#bus-card-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current */
+
+#bus-card-slide-one:checked + 
+.carousel-slide > label[for="bus-card-one-left"] + 
+label + h3 + p + p + div > 
+label[for="bus-card-slide-one"],
+
+#bus-card-slide-two:checked + 
+.carousel-slide > label[for="bus-card-two-left"] + 
+label + img + div > label[for="bus-card-slide-one"] +
+label[for="bus-card-slide-two"],
+
+#bus-card-slide-three:checked + 
+.carousel-slide > label[for="bus-card-three-left"] + 
+label + img + div > label[for="bus-card-slide-one"] + label[for="bus-card-slide-two"] +
+label[for="bus-card-slide-three"],
+
+#bus-card-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="bus-card-slide-three"],
+
+#bus-card-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="bus-card-slide-two"],
+
+#bus-card-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="bus-card-slide-one"],
+
+#bus-card-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="bus-card-slide-three"],
+
+#bus-card-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="bus-card-slide-two"],
+
+#bus-card-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="bus-card-slide-one"] {
+  
+  color:white;
+}
+
+
+/* HACKATHON ONE CONTROLS*/
+
+/* circles */
+
+#hack-one-slide-one:checked + .carousel-slide,
+#hack-one-slide-two:checked + .carousel-slide,
+#hack-one-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+
+/*arrows*/
+
+#hack-one-one-right:checked + input + .carousel-slide,
+#hack-one-two-right:checked + input + .carousel-slide,
+#hack-one-three-right:checked + input + input + .carousel-slide,
+#hack-one-one-left:checked + input + input + .carousel-slide,
+#hack-one-two-left:checked + input + .carousel-slide,
+#hack-one-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current */
+
+#hack-one-slide-one:checked + 
+.carousel-slide > label[for="hack-one-one-left"] + 
+label + h3 + p + p + div > 
+label[for="hack-one-slide-one"],
+
+#hack-one-slide-two:checked + 
+.carousel-slide > label[for="hack-one-two-left"] + 
+label + img + div > label[for="hack-one-slide-one"] +
+label[for="hack-one-slide-two"],
+
+#hack-one-slide-three:checked + 
+.carousel-slide > label[for="hack-one-three-left"] + 
+label + img + div > label[for="hack-one-slide-one"] + label[for="hack-one-slide-two"] +
+label[for="hack-one-slide-three"],
+
+#hack-one-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="hack-one-slide-three"],
+
+#hack-one-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="hack-one-slide-two"],
+
+#hack-one-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="hack-one-slide-one"],
+
+#hack-one-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="hack-one-slide-three"],
+
+#hack-one-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="hack-one-slide-two"],
+
+#hack-one-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="hack-one-slide-one"] {
+  
+  color:white;
+}
+
+
+/* TEAM COLLAB APP CONTROLS*/
+
+/* circles */
+
+#collab-slide-one:checked + .carousel-slide,
+#collab-slide-two:checked + .carousel-slide,
+#collab-slide-three:checked + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*arrows*/
+
+#collab-one-right:checked + input + .carousel-slide,
+#collab-two-right:checked + input + .carousel-slide,
+#collab-three-right:checked + input + input + .carousel-slide,
+#collab-one-left:checked + input + input + .carousel-slide,
+#collab-two-left:checked + input + .carousel-slide,
+#collab-three-left:checked + input + input + .carousel-slide {
+  display: block;
+  -webkit-animation: 1s current-project;
+  animation: 1s current-project; 
+}
+
+/*circle current */
+
+#collab-slide-one:checked + 
+.carousel-slide > label[for="collab-one-left"] + 
+label + h3 + p + p + div > 
+label[for="collab-slide-one"],
+
+#collab-slide-two:checked + 
+.carousel-slide > label[for="collab-two-left"] + 
+label + img + div > label[for="collab-slide-one"] +
+label[for="collab-slide-two"],
+
+#collab-slide-three:checked + 
+.carousel-slide > label[for="collab-three-left"] + 
+label + img + div > label[for="collab-slide-one"] + label[for="collab-slide-two"] +
+label[for="collab-slide-three"],
+
+#collab-one-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label +
+label + label[for="collab-slide-three"],
+
+#collab-one-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label +
+label[for="collab-slide-two"],
+
+#collab-two-left:checked + input +
+.carousel-slide > label + 
+label + h3 + p + p + div > 
+label[for="collab-slide-one"],
+
+#collab-two-right:checked + input + 
+.carousel-slide > label + 
+label + img + div > label + label +
+label[for="collab-slide-three"],
+
+#collab-three-left:checked + input + input +
+.carousel-slide > label + 
+label + img + div > label + label[for="collab-slide-two"],
+
+#collab-three-right:checked + input + input +
+.carousel-slide > label + label + h3 + p + p +
+div > label[for="collab-slide-one"] {
+  
+  color:white;
+}
+
+/*Projects Selection controls*/
+
+label[for="accordion"], 
+label[for="tab"], 
+label[for="gallery"], 
+label[for="cart"], 
+label[for="forms"],
+label[for="btn-comp"],
+label[for="bus-card"],
+label[for="hack-one"],
+label[for="collab"]
+ {
+  background-color: white;
+}
+
+label[for="accordion"]:hover, 
+label[for="tab"]:hover, 
+label[for="gallery"]:hover, 
+label[for="cart"]:hover, 
+label[for="forms"]:hover,
+label[for="btn-comp"]:hover,
+label[for="bus-card"]:hover,
+label[for="hack-one"]:hover,
+label[for="collab"]:hover
+ {
+  background-color: #730073;
+  color:white;
+}
+
+#accordion:checked + .content {
+  display: inline-block;
+ /* -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#selection-accordion:checked ~ label[for="accordion"] {
+  background-color: #b266b2;
+}
+
+#tab:checked + .content {
+  display: inline-block;
+ /* -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#selection-tab:checked + label[for="tab"] {
+  background-color: #b266b2;
+}
+
+#gallery:checked + .content {
+  display: inline-block;
+ /* -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#selection-gallery:checked ~ label[for="gallery"] {
+  background-color: #b266b2;
+}
+
+#cart:checked + .content {
+  display: inline-block;
+  /*-webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#cart:checked ~ label[for="cart"] {
+  background-color: #b266b2;
+}
+
+#forms:checked + .content {
+  display: inline-block;
+  /*-webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#forms:checked ~ label[for="forms"] {
+  background-color: #b266b2;
+}
+
+#btn-comp:checked + .content {
+  display: inline-block;
+/*  -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#btn-comp:checked ~ label[for="btn-comp"] {
+  background-color: #b266b2;
+}
+
+#bus-card:checked + .content {
+  display: inline-block;
+ /* -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#bus-card:checked ~ label[for="bus-card"] {
+  background-color: #b266b2;
+}
+
+#hack-one:checked + .content {
+  display: inline-block;
+/*  -webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#hack-one:checked ~ label[for="hack-one"] {
+  background-color: #b266b2;
+}
+
+#collab:checked + .content {
+  display: inline-block;
+  -/*webkit-animation: 1s current-project;
+    animation: 1s current-project;*/
+}
+
+#collab:checked ~ label[for="collab"] {
+  background-color: #b266b2;
+}
+
+
+
+
+/* BUSINESS CARD STYLES*/
+
+.card-container {
+  width:500px;
+  height:300px;
+  margin:0 auto;
+  position: relative;
+  perspective:800px;
+  color: white;
+  font-size: 1em;
+  font-family: 'Roboto', serif;
+}
+
+
+.card-container h1, h5 {
+  margin:0;
+}
+
+.card-container h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.card-container h5 {
+  font-size: .83em;
+}
+
+.card-container p {
+  font-size: .9em;
+}
+
+
+.card-container #format p {
+  display: inline-block;
+}
+
+.card-container #format a:first-child {
+  margin-right:20px;
+}
+
+.card-container img {
+  float: left;
+}
+
+.card-container .inline *{ 
+  overflow: auto;
+  vertical-align: middle;
+}
+
+.card-container .inline p {
+  margin-top:4px;
+  margin-left: 10px;
+  width:24%;
+  display: inline-block;
+  font-size: .9em;
+
+}
+
+.card-container ul li {
+  display: inline-block;
+}
+
+
+.card-container ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin:0;
+  margin-left:1px;
+  width: auto;
+}
+
+.card-container .light-pink {
+  color:pink;
+  text-decoration: none;
+}
+
+.card-container a.light-pink {
+  text-decoration: none;
+  font-size: .9em;
+}
+
+.card {
+  width:100%;
+  height:100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style:preserve-3d;
+  transition: transform 1s;
+}
+
+.front {
+  background-image: url("img/bg1.png");
+}
+
+.back {
+    background-image: url("img/business-card-me.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.back, .front {
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #323232;
+  width:100%;
+  height:100%;
+  position: absolute;
+  padding:0 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility:hidden;
+}
+
+.back p {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+}
+
+
+label[for="card-flip"]:hover > .card {
+
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+#card-flip {
+  display: none;
+}
+
+/*flip card when checked */
+#card-flip:checked ~ .card-container label[for="card-flip"] > .card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+
+
+/*footer styles*/
+
+/*override for anchor jump at bottom. dont want all the padding*/
+.footer {
+	border-bottom: none;
+	padding-top:0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+
+/*key frames*/
+
+
+@-webkit-keyframes  current-project{
+  0% {
+    /*display: block;*/
+    opacity: 0;
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes carousel-easein {
+  0% {
+    opacity: 0;
+    
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  %100 {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes top-bar {
+	0% {
+	}
+
+	50% {
+		color:#b97fb9;
+	}
+
+	100% {
+		background-color: #730073;
+		color:white;
+		border-radius: 1rem;
+		padding: .3rem;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: .8;
+	}
+}
+
+@-webkit-keyframes fadeInNav {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .1;
+	}
+
+	100% {
+		opacity: .1;
+	}
+}
+
+
+
+
+/*media queries*/
+
+@media screen and (max-width: 360px) {
+
+
+  #menu-button-open {
+  visibility: visible;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /*header about me*/
+  .section-headers {
+    font-size: 1.5rem;
+  }
+
+  .about-me-content {
+    font-size: 1rem;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .main-nav {
+
+    font-size: 1.5rem;
+  }
+
+  .main-nav ul li {
+    margin:0rem;
+    display: block;
+    /*border:1px solid black;*/
+    padding:1.5rem;
+  }
+
+  .fixed {
+    display: block;
+    /*opacity: .6; */
+  }
+
+    .search-text {
+	position: absolute;
+	top:20px;
+	left:35px;
+}
+
+  .search-bar input[type="text"]:focus + label ~ .search-text  {
+     top:0;
+	 left:35px;
+     font-size: .9rem;
+  }
+
+
+  
+  /*need to target all list items as nth-child since the last item still overrides and has the margin from 722px @media query*/
+  .main-nav ul li:nth-child(-n+4) {
+
+    margin-right:0rem;
+  }
+
+
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+      width:auto;
+      float:none;
+    }
+
+    /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+      width:350px;
+      height:220px;
+      text-align: left;
+      /*margin:0 auto;*/
+    }
+
+    .card {
+      margin:0 0;
+    }
+
+   .front, .back {
+     width:330px;
+     height:210px;
+     margin:0 0;
+   }
+
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+/*  .card-container .inline * {
+    display: inline-block;
+  }*/
+
+  .inline p {
+    display: inline-block;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+    width: 24%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+
+}
+
+
+@media screen and (min-width:361px) {
+
+
+.row {
+    display: block;
+  }
+
+
+  
+  /*need to target all list items as nth-child since the last item still overrides and has the margin from 722px @media query*/
+  .main-nav ul li:nth-child(-n+4) {
+
+    margin-right:0rem;
+  }
+
+
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+      width:auto;
+      float:none;
+    }
+
+
+
+
+  /*Nav Styles*/
+
+/*  .fixed {
+    display: flex;
+  }*/
+
+  .main-nav {
+    font-size: 1.2rem;
+  }
+
+  .main-nav ul {
+    /*border:1px solid black;*/
+    padding: 0;
+    margin:0;
+    margin-top:1.1rem;
+    /*overflow: hidden;*/
+  }
+
+  .main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin:0rem;  
+    padding:.2rem;
+  }
+
+
+  .main-nav ul li:last-child {
+    margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+  }
+
+
+   .search-text  {
+   		position: absolute;
+		top:20px;
+		left:55px;
+  	}
+
+  .search-bar input[type="text"]:focus + label ~ .search-text  {
+		top:0;
+		left:55px;
+		font-size: .9rem;
+  }
+
+
+/*
+   .projects-container label {
+    text-align:left;
+  }*/
+
+
+  /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+      width:350px;
+      height:220px;
+      text-align: left;
+    }
+
+   .front, .back {
+     width:330px;
+     height:210px;
+   }
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+    width: 24%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+
+  /*carousel*/
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+
+  .row {
+      display: flex;
+  }
+
+  /*header name*/
+  #name {
+    width:100%;
+    padding: 0;
+    margin:0;
+    margin-top:1.1rem;
+  }
+
+  
+  .search-text {
+    position: absolute;
+    top:20px;
+    left:35px;
+}
+
+  .search-bar input[type="text"]:focus + label ~ .search-text  {
+     top:0;
+     left:35px;
+     font-size: .9rem;
+  }
+
+
+  [class*="col"] {
+    float: left;
+    padding: 10px;
+  }
+
+  /*make column widths appear again*/
+  .col1 {
+    width: 8.33%;
+  }
+
+  .col2 {
+    width: 16.66%;
+  }
+
+  .col3 {
+    width: 25%;
+  }
+
+  .col4 {
+    width: 33.33%;
+  }
+
+  .col5 {
+    width: 41.66%;
+  }
+
+  .col6 {
+    width: 50%;
+  }
+
+  .col7 {
+    width: 58.33%;
+  }
+
+  .col8 {
+    width: 66.66%;
+  }
+
+  .col9 {
+    width: 75%;
+  }
+
+  .col10 {
+    width: 83.33%;
+  }
+
+  .col11 {
+    width: 91.66%;
+  }
+
+  .col12 {
+    width: 100%;
+  }
+
+
+   /*projects section style changes*/
+
+   .carousel-slide {
+      width:100%;
+   }
+
+
+  .projects-container {
+      position: relative;
+      width:80%;
+      /*border:1px solid black;*/
+      text-align: left;
+      margin: 0 auto;
+    }
+
+  .projects-container ul {
+      padding: 5px;
+  }
+
+  .projects-container .content {
+      position: relative;
+      width:75%;
+      text-align: center;
+    }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .project-container input, label {
+      text-align: left;
+   }
+
+  .projects-container label {
+    font-size: 1.4rem;
+  }
+
+  .desc-container {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+
+   .projects-container label {
+    text-align:left;
+  }
+
+  .project-selection, .content {
+    display: inline-block;
+  }
+
+  .project-selection {
+    width:23%;
+  }
+
+  .project-selection label {
+    font-size: .9rem;
+  }
+
+  .content {
+    width:75%;
+    font-size: 1rem;
+  }
+
+
+
+  /*BUSINESS CARD STYLE CHANGES*/
+  .front, .back {
+    width:400px;
+    height:230px;
+  }
+
+
+  .card-container {
+    width:400px;
+    height:250px;
+  }
+
+  .card-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .8rem;
+  }
+
+  .card-container #format p {
+    margin:7px 0;
+    padding:0;
+  }
+
+  .card-container img {
+    float: left;
+    height:35px;
+    width:35px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+    width:24%;
+  }
+
+  .card-container ul li img {
+    height:30px;
+    width:30px;
+  }
+
+  .fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:90;
+    width: 100%;
+    background-color: #730073;
+}
+
+ .non-fixed {
+   margin-top: 4.5rem;
+ }
+
+
+}
+
+@media screen and (min-width: 800px) {
+
+    .project-selection label {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  .main-nav ul li {
+    font-size: 1.6rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .main-nav ul {
+    padding: 0;
+    margin:0;
+    margin-top:.8rem;
+  }
+
+  #name {
+    font-size: 1.6rem;
+    margin-top:1.1rem;
+  }
+
+
+  /*BUSINESS CARD STYLE CHANGES*/
+
+  
+  .back, .front {
+      width:560px;
+      height:300px;
+      margin: 0 0;
+    }
+
+
+  .card-container {
+    width:570px;
+    height:320px;
+  }
+
+  .card-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-container h5 {
+    font-size: 1.3em;
+   }
+
+  .card-container p {
+    font-size: 1rem;
+  }
+
+  .card-container #format p {
+    margin:10px 0;
+    padding:0;
+    font-size: 1rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:50px;
+    width:50px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 16px;
+  }
+
+  .card-container ul li img {
+    height:40px;
+    width:40px;
+  }
+
+/*.fixed {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:90;
+  width: 100%;
+  background-color: #730073;
+  opacity: .7;
+
+}*/
+
+.non-fixed {
+  margin-top: 4.5rem;
+}
+
+  .project-selection label {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

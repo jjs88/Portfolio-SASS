@@ -1,0 +1,1190 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+	background-color: #f2e5f2;
+}
+
+
+.container {
+  width: 100%;
+  border: 1px solid black;
+  overflow: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 1rem;
+  color: #730073;
+}
+
+
+.row {
+  display: flex;
+}
+
+[class*="col"] {
+  float: left;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.8;
+  border: 2px solid black;
+
+}
+
+.col1 {
+  width: 8.33%;
+}
+
+.col2 {
+  width: 16.66%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33%;
+}
+
+.col5 {
+  width: 41.66%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col7 {
+  width: 58.33%;
+}
+
+.col8 {
+  width: 66.66%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+.col10 {
+  width: 83.33%;
+}
+
+.col11 {
+  width: 91.66%;
+}
+
+.col12 {
+  width: 100%;
+}
+
+
+/*Nav Styles*/
+
+.main-nav {
+	font-size: 1.2rem;
+}
+
+.main-nav ul {
+	border:1px solid black;
+	padding: 0;
+	overflow: hidden;
+}
+
+.main-nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right:2rem;
+}
+
+
+.main-nav ul li:last-child {
+	margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+}
+
+.main-nav ul li:hover {
+	background-color: #cc99cc;
+}
+
+.search-bar input[type="text"]:hover {
+	/*background-color:  #cc99cc;*/
+	border: 3px solid #008000;
+}
+
+/*Top name styles */
+
+.name {
+	font-size: 1.5rem;
+	padding: .3rem 0;
+}
+
+
+/*anchor styles*/
+.main-nav a {
+     text-decoration: none;
+     display: block;
+}
+
+
+/*search box styles*/
+
+.search-bar input[type="text"] {
+	width:80%;
+	padding:.3rem 0;
+	margin-right:.2rem;
+	border-width:0
+}
+
+
+/*radio button*/
+input[type="radio"] {
+	display: none;
+}
+
+
+/* move the sidebar into the screen */
+#sidebar:checked ~ .sidebar {
+	background-color: lightblue;
+	left:.1rem;
+}
+
+/*Hide the label when the sidebar slides out*/
+#sidebar:checked ~ .sidebar ~ div > .row > div > label #menu-button-open
+{
+	visibility: hidden;
+}
+
+/*move the whole web contents to the right when sidebar is checked*/
+#sidebar:checked ~ .sidebar ~ div 
+{
+	-webkit-transform:translate3d(10rem, 0, 0);
+    -moz-transform:translate3d(10rem, 0, 0);
+    -o-transform:translate3d(10rem, 0, 0);
+    transform:translate3d(10rem, 0, 0);
+}
+
+/*sidebar Menu*/
+
+.sidebar-menu {
+
+	list-style-type: none;
+	font-size: 1.4rem;
+}
+
+.sidebar ul {
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar-menu li {
+	padding: .5rem .3rem;
+}
+
+.sidebar-menu li:first-child {
+	margin-top:.3rem;
+}
+
+.sidebar-menu a {
+     text-decoration: none;
+     display: block;
+}
+
+/*do fixed vs absolute?*/
+.sidebar {
+	position: fixed;
+	width:10rem;
+	height:100vh;
+	opacity:.80;
+	background-color: lightblue;
+	left:-10rem;
+	z-index: 99;
+}
+
+#menu-button-open {
+	position: absolute;
+	top:0;
+	left:.2rem;
+	visibility: hidden;
+	padding: 0;
+	margin:0;
+	font-size: 1.5rem;
+}
+
+/*Shows when the sidebar slides out*/
+#menu-button-close {
+	position: absolute;
+	left:9rem;
+	font-size: 1.5rem;
+	color: #730073;
+}
+
+.copyright {
+	font-size: .6rem;
+	padding-left: .3rem;
+	margin: .3rem 0;
+	color: #730073;
+}
+
+
+
+/*About Me Styling*/
+
+.align-left {
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+
+/*SKILLS Styling*/
+
+
+/*container for graph. graph will be a flex box that is aligned in the center of page*/
+.graph-container {
+	/*margin:0 auto;*/
+	/*text-align: center;*/
+	height:22rem;
+	/*display: flex;*/
+	/*align-items:flex-start;*/
+	/*justify-content:center;*/
+	position: relative;
+}
+
+.graph {
+	border:1px solid black;
+	position: relative;
+}
+
+.graph h1 {
+	border:1px solid black;
+}
+
+
+
+/*graph x and y axis */
+.y-axis, .x-axis {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	border:1px solid black;
+}
+
+.y-axis, .x-axis {
+	display: inline-block;
+}
+
+.y-axis li {
+	padding-bottom: 1.5rem;
+}
+
+.x-axis {
+
+}
+
+.x-axis li{
+	display: inline-block;
+	position: relative;
+	width:2.3rem;
+	top:1.8rem;
+	padding-bottom: 1.2rem;
+}
+
+.x-axis li span {
+	display: inline-block;
+	position: relative;
+	top:2.7rem;
+	transform: rotate(50deg);
+}
+
+/*graph bars */
+
+div[class^="bar-"]:hover .tooltip {
+	visibility: visible;
+}
+
+.bar-one, .bar-two, .bar-three, .bar-four {
+	padding:0;
+	margin:0;
+}
+
+.bar-one {
+	width:2rem;
+	height:5.5rem;
+	background-color: orange;
+}
+
+.bar-two {
+	width:2rem;
+	height:4rem;
+	background-color: lightblue;
+}
+
+.bar-three {
+	width:2rem;
+	height:2rem;
+	background-color: green;
+}
+
+.bar-four {
+	width:2rem;
+	height:4rem;
+	background-color: yellow;
+}
+
+
+/*tool tip*/
+
+.tooltip {
+	position: absolute;
+	font-size: .9rem;
+	top:-2.6rem;
+	left:0rem;
+	background-color: black;
+	border-bottom:0;
+	color:white;
+	width:12rem;
+	z-index: 99;
+	/*opacity: .8;*/
+	text-align: left;
+	padding: .3rem;
+	visibility: hidden;
+
+}
+
+.one-tip {
+	top:-4.4rem;
+}
+
+.two-tip {
+	top:-2.3rem;
+}
+
+.three-tip {
+	top:-2.3rem;
+}
+
+.four-tip {
+	top:-2.3rem;
+}
+
+
+.bubble {
+	border-style: solid;
+	position: absolute;
+	border-color: black transparent transparent transparent;
+	border-width:1rem .5rem 0 .5rem;
+	left:.5rem;
+}
+
+
+
+/*PROJECTS styles*/
+
+
+
+.projects-container {
+	background-color: #cc99cc;
+}
+
+ .projects-container label {
+	display: block;
+	text-align: center;
+ }
+
+
+.projects-container .content {
+	display: none;
+	overflow-y:hidden;
+}
+
+label[for="accordion"], label[for="tab"], label[for="gallery"] {
+	background-color: white;
+}
+
+#accordion:checked ~ label[for="accordion"] + .content {
+	display: block;
+	-webkit-animation: 1s current-project;
+  	animation: 1s current-project;
+}
+
+#accordion:checked ~ label[for="accordion"] {
+	background-color: #b266b2;
+}
+
+#tab:checked ~ label[for="tab"] + .content {
+	display: block;
+	-webkit-animation: 1s current-project;
+  	animation: 1s current-project;
+}
+
+#tab:checked ~ label[for="tab"] {
+	background-color: #b266b2;
+}
+
+#gallery:checked ~ label[for="gallery"] + .content {
+	display: block;
+	-webkit-animation: 1s current-project;
+  	animation: 1s current-project;
+}
+
+#gallery:checked ~ label[for="gallery"] {
+	background-color: #b266b2;
+}
+
+.carousel {
+	margin:1rem;
+}
+
+.carousel img {
+	/*height:400px;*/
+	/*width:400px;*/
+	/*width:100%;
+	height:8rem;*/
+}
+
+.carousel img {
+	display: none;
+}
+
+.carousel .arrow-left {
+	display: none;
+}
+
+.carousel .arrow-right {
+	display: none;
+}
+
+
+.desc-container label {
+	display: inline-block;
+}
+
+
+.carousel-item label[for=""] {
+	text-align: center;
+}
+
+/*unhide the arrows and image for the carousel item contents*/
+#c-accordion-1:checked + label,
+#c-accordion-1:checked + label + label,
+#c-accordion-1:checked + label + label + img
+ {
+	display: block;
+	-webkit-animation: 1.3s carousel-easein;
+  	animation: 1.3s carousel-easein;
+ }
+
+#c-accordion-2:checked + label,
+#c-accordion-2:checked + label + label,
+#c-accordion-2:checked + label + label + img
+ {
+	display: block;
+	-webkit-animation: 1.3s carousel-easein;
+  	animation: 1.3s carousel-easein;
+ }
+
+
+ /*clicking right and left arrows*/
+#acc-one-right:checked + input + label,
+#acc-one-right:checked + input + label + label,
+#acc-one-right:checked + input + label + label + img
+ {
+	display: block;
+	-webkit-animation: 1.3s carousel-easein;
+  	animation: 1.3s carousel-easein;
+ }
+
+
+#acc-two-left:checked + input + label,
+#acc-two-left:checked + input + label + label,
+#acc-two-left:checked + input + label + label + img
+ {
+	display: block;
+	-webkit-animation: 1.3s carousel-easein;
+  	animation: 1.3s carousel-easein;
+ }
+
+
+
+.arrow-right {
+	float: right;
+}
+
+.arrow-left {
+	float: left;
+}
+
+.custom {
+	opacity: 1;
+}
+
+
+
+
+/* BUSINESS CARD STYLES*/
+
+.card-container {
+  width:500px;
+  height:300px;
+  margin:0 auto;
+  position: relative;
+  perspective:800px;
+  color: white;
+  font-size: 1em;
+  font-family: 'Roboto', serif;
+}
+
+
+.card-container h1, h5 {
+  margin:0;
+}
+
+.card-container h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.card-container h5 {
+  font-size: .83em;
+}
+
+.card-container p {
+  font-size: .9em;
+}
+
+
+.card-container #format p {
+  display: inline-block;
+}
+
+.card-container #format a:first-child {
+  margin-right:20px;
+}
+
+.card-container img {
+  float: left;
+}
+
+.card-container .inline *{ 
+  overflow: auto;
+  vertical-align: middle;
+}
+
+.card-container .inline p {
+  margin-top:4px;
+  margin-left: 10px;
+  width:24%;
+  display: inline-block;
+  font-size: .9em;
+
+}
+
+.card-container ul li {
+  display: inline-block;
+}
+
+
+.card-container ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin:0;
+  margin-left:1px;
+  width: auto;
+}
+
+.card-container .light-pink {
+  color:pink;
+  text-decoration: none;
+}
+
+.card-container a.light-pink {
+  text-decoration: none;
+  font-size: .9em;
+}
+
+.card {
+  width:100%;
+  height:100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style:preserve-3d;
+  transition: transform 1s;
+}
+
+.front {
+  background-image: url("img/bg1.png");
+}
+
+.back {
+    background-image: url("img/business-card-me.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.back, .front {
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #323232;
+  width:100%;
+  height:100%;
+  position: absolute;
+  padding:0 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility:hidden;
+}
+
+.back p {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+}
+
+
+label[for="card-flip"]:hover > .card {
+
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+#card-flip {
+  display: none;
+}
+
+/*flip card when checked */
+#card-flip:checked ~ .card-container label[for="card-flip"] > .card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+
+
+/*key frames*/
+
+
+@-webkit-keyframes  current-project{
+  0% {
+    /*display: block;*/
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes carousel-easein {
+	0% {
+		opacity: 0;
+		tra
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	%100 {
+		opacity: 1;
+	}
+}
+
+
+
+/*media queries*/
+
+@media screen and (max-width: 360px) {
+
+	#menu-button-open {
+	visibility: visible;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	/*header about me*/
+	.section-headers {
+		font-size: 1.5rem;
+	}
+
+	.about-me-content {
+		font-size: 1rem;
+	}
+
+	.row {
+		display: block;
+	}
+
+	.main-nav {
+
+		font-size: 1.5rem;
+	}
+
+	.main-nav ul li {
+		margin:0rem;
+		display: block;
+		border:1px solid black;
+		padding:1.5rem;
+	}
+
+
+	
+	/*need to target all list items as nth-child since the last item still overrides and has the margin from 722px @media query*/
+	.main-nav ul li:nth-child(-n+4) {
+
+		margin-right:0rem;
+	}
+
+
+	.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+    	width:auto;
+    	float:none;
+    }
+
+    /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+    	width:350px;
+    	height:220px;
+    	text-align: left;
+    	/*margin:0 auto;*/
+    }
+
+    .card {
+    	margin:0 0;
+    }
+
+   .front, .back {
+	 width:330px;
+     height:200px;
+     margin:0 0;
+   }
+
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+  	width: 26%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+
+  	.carousel img {
+    	width:80%;
+    	margin:0 auto;
+    	height:200px;
+
+    }
+}
+
+
+@media screen and (min-width:361px) {
+
+
+.row {
+		display: block;
+	}
+
+
+	
+	/*need to target all list items as nth-child since the last item still overrides and has the margin from 722px @media query*/
+	.main-nav ul li:nth-child(-n+4) {
+
+		margin-right:0rem;
+	}
+
+
+	.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+    	width:auto;
+    	float:none;
+    }
+
+
+
+
+	/*Nav Styles*/
+
+	.main-nav {
+		font-size: 1.2rem;
+	}
+
+	.main-nav ul {
+		/*border:1px solid black;*/
+		padding: 0;
+		margin:0;
+		margin-top:1.1rem;
+		/*overflow: hidden;*/
+	}
+
+	.main-nav ul li {
+		list-style-type: none;
+		display: inline-block;
+		margin:0rem;	
+		padding:.2rem;
+	}
+
+
+	.main-nav ul li:last-child {
+		margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+	}
+
+	 .projects-container label {
+		text-align:left;
+ 	}
+
+ 	.carousel img {
+    	width:90%;
+    	margin:0 auto;
+    	height:200px;
+
+    }
+
+        /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+    	width:350px;
+    	height:220px;
+    	text-align: left;
+    }
+
+   .front {
+	 width:330px;
+     height:200px;
+   }
+
+   .back {
+     width:330px;
+     height:200px;
+   }
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+  	width: 26%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+
+
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+
+	.row {
+  		display: flex;
+	}
+
+	/*header name*/
+	#name {
+		width:100%;
+		padding: 0;
+		margin:0;
+		margin-top:1.1rem;
+	}
+
+
+	[class*="col"] {
+	  float: left;
+	  padding: 10px;
+	}
+
+	/*make column widths appear again*/
+	.col1 {
+	  width: 8.33%;
+	}
+
+	.col2 {
+	  width: 16.66%;
+	}
+
+	.col3 {
+	  width: 25%;
+	}
+
+	.col4 {
+	  width: 33.33%;
+	}
+
+	.col5 {
+	  width: 41.66%;
+	}
+
+	.col6 {
+	  width: 50%;
+	}
+
+	.col7 {
+	  width: 58.33%;
+	}
+
+	.col8 {
+	  width: 66.66%;
+	}
+
+	.col9 {
+	  width: 75%;
+	}
+
+	.col10 {
+	  width: 83.33%;
+	}
+
+	.col11 {
+	  width: 91.66%;
+	}
+
+	.col12 {
+	  width: 100%;
+	}
+
+
+	 /*projects section style changes*/
+
+
+    .projects-container {
+    	position: relative;
+    	width:100%;
+    	border:1px solid black;
+    	margin: 0 auto;
+    }
+
+    .projects-container .content {
+    	position: relative;
+    	width:70%;
+    	top:0rem;
+    	left:11rem;
+    	margin:0;
+    	padding:0;
+    }
+
+    .carousel {
+    	position: relative;
+    	border:1px solid black;
+    	/*width:60%;*/
+    }
+
+    .carousel img {
+    	width:80%;
+    	margin:0 auto;
+    	height:400px;
+
+    }
+
+  .project-container input, label {
+		text-align: left;
+ 	 }
+
+	.projects-container label {
+		font-size: 1.4rem;
+	}
+
+	.desc-container {
+		text-align: center;
+		font-size: 1rem;
+	}
+
+
+
+	/*BUSINESS CARD STYLE CHANGES*/
+	.front, .back {
+    width:400px;
+    height:230px;
+  }
+
+
+  .card-container {
+    width:400px;
+    height:250px;
+  }
+
+  .card-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .8rem;
+  }
+
+  .card-container #format p {
+    margin:7px 0;
+    padding:0;
+  }
+
+  .card-container img {
+    float: left;
+    height:35px;
+    width:35px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+    width:24%;
+  }
+
+  .card-container ul li img {
+    height:30px;
+    width:30px;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+	.main-nav ul li {
+		font-size: 1.6rem;
+	}
+
+	.main-nav ul {
+		padding: 0;
+		margin:0;
+		margin-top:.8rem;
+	}
+
+	#name {
+		font-size: 1.6rem;
+		margin-top:1.1rem;
+	}
+
+
+	/*BUSINESS CARD STYLE CHANGES*/
+
+	
+	.back, .front {
+    	width:560px;
+    	height:300px;
+    	margin: 0 0;
+    }
+
+
+  .card-container {
+    width:570px;
+    height:320px;
+  }
+
+  .card-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-container h5 {
+    font-size: 1.3em;
+   }
+
+  .card-container p {
+    font-size: 1rem;
+  }
+
+  .card-container #format p {
+    margin:10px 0;
+    padding:0;
+    font-size: 1rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:50px;
+    width:50px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 16px;
+  }
+
+  .card-container ul li img {
+    height:40px;
+    width:40px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
