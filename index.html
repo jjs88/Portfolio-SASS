@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="normalizer.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://use.fontawesome.com/238f03f577.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,300italic|Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
 </head>
@@ -30,7 +30,13 @@
 	<div class="container" id="top">
 		<div class="row fixed">
 			<div class="col3 name">
-				<label for="sidebar"><span id="menu-button-open"><i class="fa fa-window-close" aria-hidden="true"></i></span></label>
+				<!-- <label for="sidebar"><span id="menu-button-open"><i class="fa fa-window-close" aria-hidden="true"></i></span></label> -->
+				<label for="sidebar" id="menu-button-open">
+					<div></div>
+					<div></div>
+					<div></div>
+				</label>
+
 				<p id="name">
 					Joshua Sadlon
 				</p>
@@ -136,31 +142,64 @@
 			<h1 class="section-headers">Projects</h1>
 			<div class="projects-container">
 
-				<!-- ACCORDION -->
-				<input type="radio" name="group" id="accordion" checked>
-				<label for="accordion">CSS Accordion</label>
-				<div class="content">
-					<div class="carousel">
-						<!-- carousel slide 1-->
-						<input type="radio" id="accordion-three-right" name="accordion-controls">
-						<input type="radio" id="accordion-two-left" name="accordion-controls">
-						<input type="radio" id="accordion-slide-one" name="accordion-controls" checked>
-						<div class="carousel-slide">
-							<label for="accordion-one-left" class="arrow-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></label>
-							<label for="accordion-one-right" class="arrow-right"><i class="fa fa-arrow-right" aria-hidden="true"></i></label>
-							<h3><b>Technologies:</b> HTML5, CSS3</h3>
-							<p>Accordion component made with pure CSS3.</p>
-							<p>
-								<a class="carousel-links" href="https://jjs88.github.io/MD-mastering-css-projects-responsive/accordion-component/" target="_blank">Live demo</a>
-								<a class="carousel-links" href="https://github.com/jjs88/MD-mastering-css-projects-responsive/tree/gh-pages/accordion-component" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Project source</a>
-							</p>
-							<div>
-								<label for="accordion-slide-one"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>
-								<label for="accordion-slide-two"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>	
-								<label for="accordion-slide-three"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>	
-							</div>	
-						</div>
-						<!-- carousel slide 2-->
+				<div class="project-selection">
+					<!-- ACCORDION -->
+					<label for="accordion">CSS Accordion</label>
+
+					<!-- TAB COMPONENT -->
+					<label for="tab">CSS Tab</label>
+
+					<!-- IMAGE GALLERY -->
+					<label for="gallery">Image Gallery</label>
+				
+
+					<!-- SHOPPING CART -->
+					<label for="cart">Shopping Cart</label>
+
+					<!-- FORMS -->
+					<label for="forms">Forms</label>
+
+					<!-- BUTTON COMPONENT -->
+					<label for="btn-comp">Button Component</label>
+
+					<!-- BUSINESS CARD -->
+					<label for="bus-card">Business Card</label>
+				
+					<!-- HACKATHON ONE -->
+					<label for="hack-one">Hackathon One</label>
+				
+
+					<!-- TEAM COLLAB APP -->
+					<label for="collab">Team Collab App</label>
+				<!-- end -->
+			</div>
+
+			
+
+			<!-- CONTENT accordion-->
+			<input type="radio" name="group" id="accordion" checked>
+			<div class="content">
+				<div class="carousel">
+					<!-- carousel slide 1-->
+					<input type="radio" id="accordion-three-right" name="accordion-controls">
+					<input type="radio" id="accordion-two-left" name="accordion-controls">
+					<input type="radio" id="accordion-slide-one" name="accordion-controls" checked>
+					<div class="carousel-slide">
+						<label for="accordion-one-left" class="arrow-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></label>
+						<label for="accordion-one-right" class="arrow-right"><i class="fa fa-arrow-right" aria-hidden="true"></i></label>
+						<h3><b>Technologies:</b> HTML5, CSS3</h3>
+						<p>Accordion component made with pure CSS3.</p>
+						<p>
+							<a class="carousel-links" href="https://jjs88.github.io/MD-mastering-css-projects-responsive/accordion-component/" target="_blank">Live demo</a>
+							<a class="carousel-links" href="https://github.com/jjs88/MD-mastering-css-projects-responsive/tree/gh-pages/accordion-component" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Project source</a>
+						</p>
+						<div>
+							<label for="accordion-slide-one"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>
+							<label for="accordion-slide-two"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>	
+							<label for="accordion-slide-three"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>	
+						</div>	
+					</div>
+					<!-- carousel slide 2-->
 						<input type="radio" id="accordion-three-left" name="accordion-controls">
 						<input type="radio" id="accordion-one-right" name="accordion-controls">
 						<input type="radio" id="accordion-slide-two" name="accordion-controls">
@@ -174,7 +213,7 @@
 								<label for="accordion-slide-three"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>		
 							</div>	
 						</div>	
-						<!-- carousel slide 3-->
+					<!-- carousel slide 3-->
 						<input type="radio" id="accordion-two-right" name="accordion-controls">
 						<input type="radio" id="accordion-one-left" name="accordion-controls">
 						<input type="radio" id="accordion-slide-three" name="accordion-controls">
@@ -188,14 +227,11 @@
 								<label for="accordion-slide-three"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>		
 							</div>	
 						</div>
-			
 					</div>
 				</div>
 
-				<!-- TAB COMPONENT -->
+				<!-- CONTENT TAB -->
 				<input type="radio" name="group" id="tab">
-				<label for="tab">CSS Tab</label>
-				<!-- Carousel Pop-out-->
 				<div class="content">
 					<div class="carousel">
 						<!-- carousel slide 1-->
@@ -245,14 +281,12 @@
 								<label for="tab-slide-three"><i class="fa fa-circle-thin" aria-hidden="true"></i></label>	
 							</div>	
 						</div>	
-
-
 					</div>
 				</div>
 
-				<!-- IMAGE GALLERY -->
+
+				<!-- IMAGE GALLERY CONTENT -->
 				<input type="radio" name="group" id="gallery">
-				<label for="gallery">Image Gallery</label>
 				<div class="content">
 					<div class="carousel">
 						<!-- carousel slide 1-->
@@ -305,9 +339,8 @@
 					</div>
 				</div>
 
-				<!-- SHOPPING CART -->
+				<!-- SHOPPING CART CONTENT  -->
 				<input type="radio" name="group" id="cart">
-				<label for="cart">Shopping Cart</label>
 				<div class="content">
 					<div class="carousel">
 						<!-- carousel slide 1-->
@@ -360,9 +393,8 @@
 					</div>
 				</div>
 
-				<!-- FORMS -->
+				<!-- FORMS CONTENT  -->
 				<input type="radio" name="group" id="forms">
-				<label for="forms">Forms</label>
 				<div class="content">
 					<div class="carousel">
 						<!-- carousel slide 1-->
@@ -415,9 +447,8 @@
 					</div>
 				</div>
 
-				<!-- BUTTON COMPONENT -->
+				<!-- BUTTON CONTENT  -->
 				<input type="radio" name="group" id="btn-comp">
-				<label for="btn-comp">Button Component</label>
 				<div class="content">
 					<div class="carousel">
 					<!-- carousel slide 1-->
@@ -454,9 +485,9 @@
 				</div>
 			</div>
 
-			<!-- BUSINESS CARD -->
+
+			<!-- BUSINESS CARD CONTENT -->
 			<input type="radio" name="group" id="bus-card">
-			<label for="bus-card">Business Card</label>
 			<div class="content">
 				<div class="carousel">
 				<!-- carousel slide 1-->
@@ -509,9 +540,8 @@
 				</div>
 			</div>
 
-			<!-- HACKATHON ONE -->
+			<!-- HACKATHON CONTENT -->
 			<input type="radio" name="group" id="hack-one">
-			<label for="hack-one">Hackathon One</label>
 			<div class="content">
 				<div class="carousel">
 					<!-- carousel slide 1-->
@@ -567,9 +597,8 @@
 				</div>
 			</div>
 
-			<!-- TEAM COLLAB APP -->
+			<!-- COLLAB CONTENT  -->
 			<input type="radio" name="group" id="collab">
-			<label for="collab">Team Collab App</label>
 			<div class="content">
 				<div class="carousel">
 					<!-- carousel slide 1-->
@@ -623,7 +652,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- end -->
+
+
+
+			<!-- end of content -->
 			</div>
 		</div>
 	</div>
