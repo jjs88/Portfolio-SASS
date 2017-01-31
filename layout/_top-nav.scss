@@ -1,0 +1,379 @@
+#top {
+	border-bottom: none;
+	padding-top:0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.main-nav {
+  font-size: 1.2rem;
+}
+
+.main-nav ul {
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right:1.3rem;
+  font-size:1.7rem;
+  padding:0;
+}
+
+
+.main-nav ul li:last-child {
+  margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+}
+
+/*Top name styles */
+
+.name {
+  font-size: 1.7rem;
+  padding: .3rem 0;
+  -webkit-animation: fadeIn ease-in 2.5s;
+}
+
+/*top nav animation*/
+#about {
+   -webkit-animation: fadeInNav ease-in 2s; 
+}
+
+#projects {
+  -webkit-animation: fadeInNav ease-in 2.3s;
+}
+
+#skills {
+  -webkit-animation: fadeInNav ease-in 2.6s;
+}
+
+#contact {
+  -webkit-animation: fadeInNav ease-in 3s;
+}
+
+/*anchor styles*/
+.main-nav a {
+     display: block;
+}
+
+
+/*search box styles*/
+
+.search {
+  position: relative;
+  /*padding:5px;*/
+  /*vertical-align: bottom;*/
+}
+
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+.search-bar input[type="text"]:focus + label ~ .search-text  {
+  top:0;
+  font-size: .9rem;
+}
+
+
+
+.search-bar input[type="text"] {
+  width:80%;
+  padding:.3rem 0;
+  margin-right:.2rem;
+  margin-bottom: .1rem;
+  border-top:0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid purple;
+  text-transform: uppercase;
+  color:purple;
+}
+
+input::-webkit-input-placeholder {
+  color: purple;
+}
+
+input:-moz-placeholder{
+  color: purple;
+}
+
+/* unvisited link */
+.main-nav a,
+.carousel a
+ {
+  text-decoration: none;
+}
+
+.main-nav a:link,
+.carousel a:link {
+
+    color: $darkPurple;
+}
+
+/* visited link */
+a:visited {
+    color: $darkPurple;
+}
+
+/* mouse over link */
+.main-nav a:hover {
+  -webkit-animation: top-bar .5s;
+}
+
+/* selected link */
+a:active {
+    color: $darkPurple;
+}
+
+
+.search-text {
+  position: absolute;
+  top:20px;
+  left:35px;
+}
+
+.search-bar input[type="text"]:focus + label ~ .search-text  {
+  top:0;
+  left:35px;
+  font-size: .9rem;
+}
+
+
+#menu-button-open {
+  position: absolute;
+  top:0;
+  left:.2rem;
+  visibility: hidden;
+  padding: 0;
+  margin:0;
+}
+
+#menu-button-open div {
+  width:35px;
+  height:5px;
+  background-color: $darkPurple;
+  margin:6px 0;
+}
+
+/*Shows when the sidebar slides out*/
+#menu-button-close {
+  position: absolute;
+  left:9rem;
+  color: $darkPurple;
+}
+
+.copyright {
+  font-size: .6rem;
+  padding-left: .3rem;
+  margin: .3rem 0;
+  color: $darkPurple;
+}
+
+#name {
+    font-size: 1.6rem;
+    margin-top:1.1rem;
+  }
+
+
+
+
+
+
+@-webkit-keyframes top-bar {
+  0% {
+  }
+
+  50% {
+    color:#b97fb9;
+  }
+
+  100% {
+    background-color: $darkPurple;
+    color:white;
+    border-radius:5px;
+    padding: .1rem;
+  }
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+
+
+      .fixed { display: block; }
+
+      .main-nav { font-size: 1.5rem; }
+    
+      #menu-button-open { visibility: visible; }
+
+      .hidden {
+        display: none;
+      }
+
+      .main-nav ul li {
+        margin:0rem;
+        display: block;
+        padding:1.5rem;
+      }
+
+      .search-text {
+        position: absolute;
+        top:20px;
+        left:35px;
+      }
+
+      .search-bar input[type="text"]:focus + label ~ .search-text  {
+        top:0;
+        left:35px;
+        font-size: .9rem;
+      }
+
+       .main-nav ul li:nth-child(-n+4) { margin-right:0rem; }
+
+       #name {
+        font-size:1.5rem;
+       }
+
+
+}
+
+
+
+@media screen and (min-width:361px) { 
+  
+  .main-nav ul li {
+    font-size:1.2rem;
+  }
+
+  .main-nav ul {
+    /*border:1px solid black;*/
+    padding: 0;
+    margin:0;
+    margin-top:1.1rem;
+  }
+
+  .main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin:0rem;  
+    padding:.2rem;
+  }
+
+
+  .main-nav ul li:last-child {
+    margin:0; /* need this so the last item doesn't fall to next line when minimizing screen */
+  }
+
+  #name {
+    font-size:1.5rem;
+  }
+
+  .search-text  {
+    position: absolute;
+    top:20px;
+    left:55px;
+  }
+
+  .search-bar input[type="text"]:focus + label ~ .search-text  {
+    top:0;
+    left:55px;
+    font-size: .9rem;
+  }
+
+
+
+}
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      width: 100%;
+      background-color: $darkPurple;
+  }
+
+  .main-nav ul li{
+    font-size: 1.3rem;
+    margin-right: .5rem;
+  }
+
+  /*header name*/
+  #name {
+    width:100%;
+    padding: 0;
+    margin:0;
+    margin-top:1.5rem;
+    font-size:1.4rem;
+  }
+
+  
+  .search-text {
+    position: absolute;
+    top:20px;
+    left:35px;
+  }
+
+  .search-bar input[type="text"]:focus + label ~ .search-text  {
+     top:0;
+     left:35px;
+     font-size: .9rem;
+  }
+
+
+}
+
+
+@media screen and (min-width: 800px) {
+  
+  .main-nav ul li {
+    font-size: 1.5rem;
+    margin-right: .6rem !important;
+  }
+
+  .main-nav {
+    margin-bottom:.5rem;
+  }
+
+  .main-nav ul li:nth-child(-n+4) {
+
+    margin-right:0rem;
+  }
+
+  #name {
+    padding:5px;
+  }
+
+  
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .main-nav ul li {
+    font-size: 1.7rem;
+    margin-right: .6rem !important;
+  }
+
+
+  #name {
+    font-size:1.7rem;
+  }
+
+  
+}
+
+
+
+
+
+
+
+

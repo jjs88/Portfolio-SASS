@@ -1,0 +1,389 @@
+/* BUSINESS CARD STYLES*/
+
+.card-container {
+  width:500px;
+  height:300px;
+  margin:0 auto;
+  position: relative;
+  perspective:800px;
+  color: white;
+  font-size: 1em;
+  font-family: 'Roboto', serif;
+}
+
+
+.card-container h1, h5 {
+  margin:0;
+}
+
+.card-container h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.card-container h5 {
+  font-size: .83em;
+}
+
+.card-container p {
+  font-size: .9em;
+}
+
+
+.card-container #format p {
+  display: inline-block;
+}
+
+.card-container #format a:first-child {
+  margin-right:20px;
+}
+
+.card-container img {
+  float: left;
+}
+
+.card-container .inline *{ 
+  overflow: auto;
+  vertical-align: middle;
+}
+
+.card-container .inline p {
+  margin-top:4px;
+  margin-left: 10px;
+  width:24%;
+  display: inline-block;
+  font-size: .9em;
+
+}
+
+.card-container ul li {
+  display: inline-block;
+}
+
+
+.card-container ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin:0;
+  margin-left:1px;
+  width: auto;
+}
+
+.card-container .light-pink {
+  color:pink;
+  text-decoration: none;
+}
+
+.card-container a.light-pink {
+  text-decoration: none;
+  font-size: .9em;
+}
+
+.card {
+  width:100%;
+  height:100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style:preserve-3d;
+  transition: transform 1s;
+}
+
+.front {
+  background-image: url("img/bg1.png");
+}
+
+.back {
+    background-image: url("img/business-card-me.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.back, .front {
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #323232;
+  width:100%;
+  height:100%;
+  position: absolute;
+  padding:0 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility:hidden;
+}
+
+.back p {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+}
+
+
+label[for="card-flip"]:hover > .card {
+
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+#card-flip {
+  display: none;
+}
+
+/*flip card when checked */
+#card-flip:checked ~ .card-container label[for="card-flip"] > .card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+
+@media screen and (min-width:361px) {
+  /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+      width:350px;
+      height:220px;
+      text-align: left;
+    }
+
+   .front, .back {
+     width:330px;
+     height:210px;
+   }
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: 1em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+    width: 24%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+   /*BUSINESS CARD STYLE CHANGES*/
+
+    .card-container {
+      width:350px;
+      height:220px;
+      text-align: left;
+      /*margin:0 auto;*/
+    }
+
+    .card {
+      margin:0 0;
+    }
+
+   .front, .back {
+     width:330px;
+     height:210px;
+     margin:0 0;
+   }
+
+
+   .card-container h1 {
+     font-size: 1.5rem;
+   }
+
+  .card-container h5 {
+    font-size: .8em;
+   }
+
+  .card-container p {
+    font-size: .75rem;
+  }
+
+  .card-container #format p {
+    margin:3px 0;
+    padding:0;
+    font-size: .9rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:30px;
+    width:30px;
+  }
+
+/*  .card-container .inline * {
+    display: inline-block;
+  }*/
+
+  .inline p {
+    display: inline-block;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+  }
+
+  .card-container .inline p {
+    width: 24%;
+  }
+
+  .card-container ul li img {
+    height:20px;
+    width:20px;
+  }
+}
+
+@media screen and (min-width:361px) {
+    .card-container h5 {
+    font-size: .8em;
+   }
+}
+
+@media screen and (min-width: 600px) {
+    /*BUSINESS CARD STYLE CHANGES*/
+  .front, .back {
+    width:400px;
+    height:230px;
+  }
+
+
+  .card-container {
+    width:400px;
+    height:250px;
+  }
+
+  .card-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-container h5 {
+    font-size: .9em;
+   }
+
+  .card-container p {
+    font-size: .8rem;
+  }
+
+  .card-container #format p {
+    margin:7px 0;
+    padding:0;
+  }
+
+  .card-container img {
+    float: left;
+    height:35px;
+    width:35px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 10px;
+    width:24%;
+  }
+
+  .card-container ul li img {
+    height:30px;
+    width:30px;
+  }
+
+  .fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:90;
+    width: 100%;
+    background-color: #730073;
+}
+}
+
+
+@media screen and (min-width: 1024px) {
+  
+  /*BUSINESS CARD STYLE CHANGES*/
+
+  
+  .back, .front {
+      width:560px;
+      height:300px;
+      margin: 0 0;
+    }
+
+
+  .card-container {
+    width:570px;
+    height:320px;
+  }
+
+  .card-container h1 {
+    font-size: 2.1rem;
+  }
+
+  .card-container h5 {
+    font-size: 1.5rem;
+   }
+
+  .card-container p {
+    font-size: 1rem;
+  }
+
+  .card-container #format p {
+    margin:10px 0;
+    padding:0;
+    font-size: 1rem;
+  }
+
+  .card-container img {
+    float: left;
+    height:50px;
+    width:50px;
+  }
+
+
+  .card-container .inline p {
+    font-size: 16px;
+  }
+
+  .card-container ul li img {
+    height:40px;
+    width:40px;
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+

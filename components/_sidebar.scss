@@ -1,0 +1,82 @@
+/*sidebar Menu*/
+
+.sidebar-menu {
+
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: .5rem .3rem;
+}
+
+.sidebar-menu li:first-child {
+  margin-top:.3rem;
+}
+
+.sidebar-menu a {
+     text-decoration: none;
+     display: block;
+}
+
+/*do fixed vs absolute?*/
+.sidebar {
+  position: fixed;
+  width:10rem;
+  height:100vh;
+  opacity:.80;
+  background-color: #f2e5f2;
+  left:-10rem;
+  z-index: 99;
+}
+
+/*Shows when the sidebar slides out*/
+#menu-button-close {
+  position: absolute;
+  left:9rem;
+  /*font-size: 1.5rem;*/
+  color: #730073;
+}
+
+
+/* move the sidebar into the screen */
+#sidebar:checked ~ .sidebar {
+  background-color: #f2e5f2;
+  left:.1rem;
+}
+
+/*Hide the label when the sidebar slides out*/
+#sidebar:checked ~ .sidebar ~ div > .row > div > #menu-button-open
+{
+  visibility: hidden;
+}
+
+/*move the whole web contents to the right when sidebar is checked*/
+#sidebar:checked ~ .sidebar ~ div 
+{
+  -webkit-transform:translate3d(10rem, 0, 0);
+  -moz-transform:translate3d(10rem, 0, 0);
+  -o-transform:translate3d(10rem, 0, 0);
+  transform:translate3d(10rem, 0, 0);
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+
+  
+   
+}
+
+
+
+
+
+
+

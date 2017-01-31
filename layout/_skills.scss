@@ -1,0 +1,148 @@
+/*SKILLS Styling*/
+
+.skills-content {
+  width:67%;
+  text-align: left;
+  margin:0 auto;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+
+.test {
+	  height: 31rem;
+}
+
+/*container for graph. graph will be a flex box that is aligned in the center of page*/
+.graph-container {
+  position: relative;
+}
+
+.graph {
+  position: relative;
+}
+
+
+/*graph x and y axis */
+.y-axis, .x-axis {
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+
+.y-axis, .x-axis {
+  display: inline-block;
+}
+
+.y-axis li {
+  padding-bottom: 1.5rem;
+}
+
+.x-axis {
+  font-size: 1rem;
+}
+
+.x-axis li{
+  display: inline-block;
+  position: relative;
+  width:2.3rem;
+  top:1.8rem;
+  padding-bottom: 1.2rem;
+}
+
+.x-axis li span {
+  display: inline-block;
+  position: relative;
+  top:2.7rem;
+  transform: rotate(50deg);
+}
+
+.x-axis li:nth-child(3) span {
+  margin-left:9px;
+  top:2.3rem;
+}
+
+.x-axis li:nth-child(4) span {
+  margin-left:9px;
+  top:2.3rem;
+}
+
+
+/*graph bars */
+
+div[class^="bar-"]:hover .tooltip {
+  visibility: visible;
+}
+
+.bar-one, .bar-two, .bar-three, .bar-four {
+  padding:0;
+  margin:0;
+}
+
+.bar-one {
+  width:2rem;
+  height:5.5rem;
+  background-color: #45C594;
+}
+
+.bar-two {
+  width:2rem;
+  height:4rem;
+  background-color: #FA8072;
+}
+
+.bar-three {
+  width:2rem;
+  height:2rem;
+  background-color: #fac472;
+}
+
+.bar-four {
+  width:2rem;
+  height:4rem;
+  background-color: #fa72a8;
+}
+
+
+/*tool tip*/
+
+.tooltip {
+  position: absolute;
+  font-size: .9rem;
+  top:-2.6rem;
+  left:0rem;
+  background-color: #f2e5f2;
+  border-bottom:0;
+  color:purple;
+  width:12rem;
+  z-index: 99;
+  text-align: left;
+  padding: .3rem;
+  visibility: hidden;
+
+}
+
+.one-tip {
+  top:-4.4rem;
+}
+
+.two-tip {
+  top:-2.3rem;
+}
+
+.three-tip {
+  top:-2.3rem;
+}
+
+.four-tip {
+  top:-2.3rem;
+}
+
+
+.bubble {
+  border-style: solid;
+  position: absolute;
+  border-color: #f2e5f2 transparent transparent transparent;
+  border-width:1rem .5rem 0 .5rem;
+  left:.5rem;
+}
