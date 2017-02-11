@@ -120,6 +120,7 @@ a:visited {
 /* mouse over link */
 .main-nav a:hover {
   -webkit-animation: top-bar .5s;
+  cursor:pointer;
 }
 
 /* selected link */
@@ -138,6 +139,10 @@ a:active {
   top:0;
   left:35px;
   font-size: .9rem;
+}
+
+.search-bar input[type="text"]:focus {
+  cursor:pointer;
 }
 
 

@@ -423,7 +423,8 @@ a:visited {
 
 /* mouse over link */
 .main-nav a:hover {
-  -webkit-animation: top-bar .5s; }
+  -webkit-animation: top-bar .5s;
+  cursor: pointer; }
 
 /* selected link */
 a:active {
@@ -438,6 +439,9 @@ a:active {
   top: 0;
   left: 35px;
   font-size: .9rem; }
+
+.search-bar input[type="text"]:focus {
+  cursor: pointer; }
 
 #menu-button-open {
   position: absolute;
@@ -673,8 +677,12 @@ a:active {
   top: 2.3rem; }
 
 /*graph bars */
+div[class^="bar-"]:hover {
+  cursor: pointer; }
+
 div[class^="bar-"]:hover .tooltip {
-  visibility: visible; }
+  visibility: visible;
+  cursor: pointer; }
 
 .bar-one, .bar-two, .bar-three, .bar-four {
   padding: 0;
@@ -768,7 +776,8 @@ div[class^="bar-"]:hover .tooltip {
 
 .projects-container i:hover {
   background-color: purple;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 .carousel-links {
   margin: 1rem; }
@@ -1336,7 +1345,8 @@ label[for="bus-card"]:hover,
 label[for="hack-one"]:hover,
 label[for="collab"]:hover {
   background-color: #730073;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 #accordion:checked + .content {
   display: inline-block;
@@ -1526,7 +1536,8 @@ label[for="collab"]:hover {
 
 label[for="card-flip"]:hover > .card {
   -webkit-transform: rotateX(15deg);
-  transform: rotateX(15deg); }
+  transform: rotateX(15deg);
+  cursor: pointer; }
 
 #card-flip {
   display: none; }

@@ -7,6 +7,7 @@
 .projects-container i:hover {
   background-color: purple;
   color:white;
+  cursor:pointer;
 }
 
 .carousel-links {
@@ -752,6 +753,7 @@ label[for="collab"]:hover
  {
   background-color: #730073;
   color:white;
+  cursor:pointer;
 }
 
 #accordion:checked + .content {

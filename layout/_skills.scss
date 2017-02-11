@@ -70,8 +70,13 @@
 
 /*graph bars */
 
+div[class^="bar-"]:hover {
+  cursor:pointer;
+}
+
 div[class^="bar-"]:hover .tooltip {
   visibility: visible;
+  cursor:pointer;
 }
 
 .bar-one, .bar-two, .bar-three, .bar-four {
