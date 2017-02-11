@@ -160,10 +160,21 @@ div[class^="bar-"]:hover .tooltip {
   }
 }
 
+
+@media screen and (min-width: 361px) {
+  .skills-content {
+    width:75%;
+  }
+}
+
 @media screen and (min-width: 600px) {
   
    .y-axis {
     margin-right:20px;
+  }
+
+   .skills-content {
+    width:65%;
   }
 }
 
@@ -175,6 +186,14 @@ div[class^="bar-"]:hover .tooltip {
 
   .x-axis li:nth-child(-n+3) {
     margin-right:15px;
+  }
+
+  .graph {
+    margin-top:40px;
+  }
+
+  .skills-content {
+    margin: 30px auto;
   }
 }
 

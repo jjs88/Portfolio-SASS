@@ -193,7 +193,6 @@ a:active {
     background-color: $darkPurple;
     color:white;
     border-radius:5px;
-    padding: .1rem;
   }
 }
 
@@ -331,6 +330,10 @@ a:active {
      top:0;
      left:35px;
      font-size: .9rem;
+  }
+
+  .name-background {
+    background-color:white;
   }
 
 
