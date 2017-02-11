@@ -21,6 +21,10 @@
           font-size: 1.2rem !important;
         }
 
+        .section-headers {
+          font-size:175%;
+        }
+
 }
 
 
@@ -43,6 +47,11 @@
       width:auto;
       float:none;
     }
+
+
+   .section-headers {
+      font-size:195%;
+   }
 
   /*carousel*/
   .carousel {
@@ -112,6 +121,7 @@
   .col12 {
     width: 100%;
   }
+
 
    /*header name*/
   #name {

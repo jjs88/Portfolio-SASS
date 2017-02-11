@@ -9,6 +9,9 @@ body {
 input[type="radio"] {
   display: none; }
 
+.section-headers {
+  font-size: 250%; }
+
 .container {
   width: 100%;
   overflow: auto;
@@ -86,7 +89,10 @@ input[type="radio"] {
     font-size: 1rem; }
 
   #hello {
-    font-size: 1.2rem !important; } }
+    font-size: 1.2rem !important; }
+
+  .section-headers {
+    font-size: 175%; } }
 @media screen and (min-width: 361px) {
   .row {
     display: block; }
@@ -98,6 +104,9 @@ input[type="radio"] {
   .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
     width: auto;
     float: none; }
+
+  .section-headers {
+    font-size: 195%; }
 
   /*carousel*/
   .carousel {
@@ -500,7 +509,7 @@ a:active {
     margin-right: 0rem; }
 
   #name {
-    font-size: 1.5rem; } }
+    font-size: 2.2rem; } }
 @media screen and (min-width: 361px) {
   .main-nav ul li {
     font-size: 1.2rem; }
@@ -532,7 +541,11 @@ a:active {
   .search-bar input[type="text"]:focus + label ~ .search-text {
     top: 0;
     left: 55px;
-    font-size: .9rem; } }
+    font-size: .9rem; }
+
+  #name {
+    font-size: 2.2rem;
+    margin-bottom: 0; } }
 @media screen and (min-width: 600px) {
   .fixed {
     position: fixed;
@@ -575,14 +588,16 @@ a:active {
     margin-right: 0rem; }
 
   #name {
-    padding: 5px; } }
+    padding: 5px;
+    font-size: 1.8rem;
+    margin-top: 1.1rem; } }
 @media screen and (min-width: 1024px) {
   .main-nav ul li {
     font-size: 1.7rem;
     margin-right: .6rem !important; }
 
   #name {
-    font-size: 1.7rem; } }
+    font-size: 2rem; } }
 /*About Me Styling*/
 .align-left {
   text-align: left;
@@ -591,6 +606,16 @@ a:active {
 #hello {
   font-size: 1.5rem; }
 
+.about-me-content {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 140%; }
+
+@media screen and (min-width: 600px) {
+  .about-me-content {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 140%; } }
 /*SKILLS Styling*/
 .skills-content {
   width: 67%;
@@ -707,6 +732,22 @@ div[class^="bar-"]:hover .tooltip {
   border-width: 1rem .5rem 0 .5rem;
   left: .5rem; }
 
+.skills-content {
+  width: 65%;
+  line-height: 140%; }
+
+@media screen and (max-width: 360px) {
+  .y-axis {
+    margin-right: 10px; } }
+@media screen and (min-width: 600px) {
+  .y-axis {
+    margin-right: 20px; } }
+@media screen and (min-width: 800px) {
+  .y-axis li {
+    padding-bottom: 2rem; }
+
+  .x-axis li:nth-child(-n+3) {
+    margin-right: 15px; } }
 /*PROJECTS styles*/
 .projects-container i {
   border-radius: 50%; }

@@ -146,3 +146,46 @@ div[class^="bar-"]:hover .tooltip {
   border-width:1rem .5rem 0 .5rem;
   left:.5rem;
 }
+
+.skills-content {
+  width:65%;
+  line-height:140%;
+}
+
+
+@media screen and (max-width: 360px) {
+  
+  .y-axis {
+    margin-right:10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  
+   .y-axis {
+    margin-right:20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  
+  .y-axis li {
+    padding-bottom:2rem;
+  }
+
+  .x-axis li:nth-child(-n+3) {
+    margin-right:15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
