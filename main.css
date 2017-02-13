@@ -480,6 +480,9 @@ a:active {
     background-color: #730073;
     color: white;
     border-radius: 5px; } }
+.search-text {
+  -webkit-transition: ease-in .1s; }
+
 @media screen and (max-width: 360px) {
   .fixed {
     display: block; }
